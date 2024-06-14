@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Importando CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Importando JS -->
+    <script defer src="js/scriptDarkMode.js"></script>
+    <script defer src="js/scriptSideMenu.js"></script>
+    <script defer src="js/scriptVanMenu.js"></script>
+    <script defer src="js/scriptChangeMenu.js"></script>
+    <script defer src="js/scriptModals.js"></script>
+    <script defer src="js/scriptImageUpload.js"></script>
+    <script defer src="js/scriptPassword.js"></script>
+    <script defer src="js/scriptValidationPass.js"></script>
+    <script defer src="js/scriptNotification.js"></script>
+
+    <!-- Importando Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="bg close"></div>
+    <div id="dash-container">
+        <header id="header-area">
+            <div id="header-left">
+                <i class="bi bi-list" id="btn-menu"></i>
+                <div id="switch-mode">
+                    <i class="light bi bi-brightness-high-fill"></i>
+                    <div id="switcher" class="ligth-mode">
+                        <div class="btn-switch"></div>
+                    </div>
+                    <i class="dark bi bi-moon"></i>
+                </div>
+            </div>
+            <div class="header-right">
+                <!--
+                <p id="message-area" class="relative">
+                    <i class="bi bi-chat-dots btn-chat"></i>
+                    <i class="bi bi-circle-fill bired"></i>
+                </p>-->
+                <p id="notification">
+                    <i class="bi bi-bell"></i>
+                    <i class="bi bi-circle-fill bired"></i>
+                    <div class="notificationList NoVisible">
+                        <ul>
+                            <li><a href="#">Aprovar o documento de <span class="name-not">Fulano de tal</span>.</a></li>
+                            <li><a href="#">O BI de <span class="name-not">Fulano de tal</span> caduca na prócima semana.</a></li>
+                            <li><a href="#">Connfirmar compra de <span class="name-not">Fulano de tal.</span></a></li>
+                            <li><a href="#"><span class="name-not">Fulano de tal</span> fez uma nova compra.</a></li>
+                            <div class="btn-notification"><a href="#" class="btn-notification">Ver Todas</a></div>
+                        </ul>
+                    </div>
+                </p>
+                <p id="user-area" class="relative">
+                    <i class="bi bi-person-circle"></i>
+                    <div class="user-area-show close-menu">
+                        <p class="user-position text">Cargo</p>
+                        <p class="user-name text">NFulano de tal</p>
+                        <hr>
+                        <div id="options">
+                            <p class="text notification-icon" id="btn-profile">
+                                <i class="bi bi-person"></i>
+                                <a href="#" class="text">Perfil</a>
+                            </p>
+                            <p class="text notification-icon" id="btn-config-other">
+                                <i class="bi bi-gear"></i>
+                                <a href="#" class="text">Configurações</a>
+                            </p>
+                            <p class="text notification-icon">
+                                <i class="bi bi-door-open"></i>
+                                <a href="#" class="text">Sair</a>
+                            </p>
+                        </div>
+                    </div>
+                </p>
+            </div>
+        </header>
+        <nav id="dash-nav" class="big-menu">
+            <div id="dash-logo" class="pos-left ">
+                <a href="#" class="show" id="img-logo" ><img src="img/logo.png" alt=""></a>
+            </div>
+            <ul id="dash-menu">
+                <li class="dash-li-menu">
+                    <a href="#" class="li-principal" id="btn-Dashboard">
+                        <i class="bi bi-columns-gap first-bi"></i>
+                        <span class="list-item  show">Dashboard</span>
+                    </a>
+                </li>
+                <li class="dash-li-menu">
+                    <a href="#" class="li-principal" id="btn-shareholder">
+                        <i class="bi bi-coin first-bi"></i>
+                        <span class="list-item show-list">Accionistas</span>
+                    </a>
+                </li>
+                <li class="dash-li-menu">
+                    <a href="#" class="li-principal" class="li-principal" id="btn-movement">
+                        <i class="bi bi-signpost-2-fill first-bi"></i>
+                        <span class="list-item show-list">Movimentos</span>
+                    </a>   
+                </li>
+                <li class="dash-li-menu">
+                    <a href="#" class="li-principal" id="btn-tax">
+                        <i class="bi bi-cash-stack first-bi"></i>
+                        <span class="list-item show-list">Taxas</span>
+                    </a>
+                </li>
+                <li class="dash-li-menu">
+                    <a href="#" class="li-principal" id="btn-investiment">
+                        <i class="bi bi-wallet first-bi"></i>
+                        <span class="list-item show-list">Investimentos</span>
+                    </a>
+                </li>
+                <li class="dash-li-menu">
+                    <a href="#" class="li-principal" id="btn-user">
+                        <i class="bi bi-person first-bi"></i>
+                        <span class="list-item show-list">Utilizadores</span>
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <ul id="config-menu">
+                <li class="">
+                    <a href="#" class="li-principal" id="btn-config">
+                        <i class="bi bi-gear first-bi"></i>
+                        <span class="list-item show-list">Configurações</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="li-principal">
+                        <i class="bi bi-box-arrow-left first-bi"></i>
+                        <span class="list-item show-list">Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main-area-dash">
+            <div class="address">
+                <a href="#" class="text btn-home">Início</a>
+                <i class="bi bi-chevron-right text"></i>
+                <a href="#" class="text" id="address-final"></a>
+            </div>
+            <section id="dashboard-area" class="section-area show-menu">
+                <p class="title text">Dashboard</p>
+            </section>
+           
+            <section id="shareholder-area" class="section-area  hide-menu">
+                <p class="title text">Accionistas</p>
+            </section>
+            
+            <section id="movement-area" class="section-area  hide-menu">
+                <p class="title text">Movimentos</p>
+            </section>
+            
+            <section id="tax-area" class="section-area  hide-menu">
+                <p class="title text">Taxas</p>
+            </section>
+            <section id="investiment-area" class="section-area  hide-menu">
+                <p class="title text">Investimentos</p>
+            </section>
+            
+            <section id="user-area-dash" class="section-area  hide-menu">
+                <p class="title text">Usuarios</p>
+            </section>
+           
+            <section id="config-area" class="section-area  hide-menu">
+                <p class="title text">Configurações</p>
+            </section>
+
+            <section id="profile-area" class="section-area hide-menu" >
+                <p class="title text">Perfil</p>
+                <div id="personal-data-container">
+                    <figure><img src="img/img.jpg" alt=""></figure>
+                    <div id="personal-data">
+                        <p class="profile user-name">
+                            <span class="profile-title">Nome:</span>
+                            <span class="profile-data">Fulana de tal</span>
+                        </p>
+                        <p class="profile profile-user-position">
+                            <span class="profile-title">Cargo:</span>
+                            <span class="profile-data">Desconhecido</span>
+                        </p>
+                        <p class="profile profile-previlegy">
+                            <span class="profile-title">Previlégios</span>
+                            <span class="profile-data">Desconhecido</span>
+                        </p>
+                        <div id="profile-options">
+                            <button type="button" class="btn" id="change-image">Alterar Imagem</button>
+                            <button type="button" class="btn" id="change-password">Alterar Senha</button>
+                        </div>
+                    </div>
+                    <div id="register">
+                        <p>Registo de actividade</p>
+                    </div>
+                </div>
+                <div id="change-image-container" class="hide-modal">
+                    <div class="change-image">
+                        <figure>
+                            <img id="image-preview" src="img/user.png" alt="">
+                        </figure>
+                        <div class="new-image">
+                            <input type="file" id="image-upload" accept="image/*">
+                        </div>
+                        <div class="btn-change-image">
+                            <button type="button" class="btn" id="confirm-upload">Confirmar</button>
+                            <button type="button" class="btn" id="remove-image">Remover Imagem</button>
+                            <button type="button" class="btn cancel-upload">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="change-pass-container" class="hide-modal-pass">
+                    <div id="change-pass" class="modal modal-up showPassPanel">
+                        <form action="" id="change-pass-form">
+                            <div class="form-control">
+                                <label for="the-password" class="no-label-effect lbl-email">Palavra-passe Actual</label>
+                                <input type="password" name="password-actual" id="the-password" class="personal input-effect">
+                                <i class="bi bi-eye-fill eye"></i>
+                                <span class="error-message errorEmail hide"><i class="bi bi-info-circle-fill"></i>Palavra Passe incorrecta</span>
+                            </div>
+                            <h1 class="title text">Crie Uma Nova Senha</h1><br>
+                            <div class="form-control">
+                                <label for="change-pass1" class="no-label-effect newPass1">Nova Senha</label>
+                                <input type="password" name="pass1" id="change-pass1" class="pass personal passWord input-effect">
+                                <i class="bi bi-eye-fill eye"></i>
+                                <span class="error-message pass1Error hide"><i class="bi bi-info-circle-fill"></i>Senha inválida (deve ter 6 caracteres no mínimo)</span>
+                            </div>
+                            <div class="form-control">
+                                <label for="change-pass2" class="no-label-effect newPass2">Repetir Senha</label>
+                                <input type="password" name="pass2" id="change-pass2" class="pass personal passWord input-effect">
+                                <i class="bi bi-eye-fill eye"></i>
+                                <span class="error-message pass2Error hide"><i class="bi bi-info-circle-fill"></i>As senhas não coincidem</span>
+                            </div>
+                            <div class="form-control no-bottom">
+                                <button type="button" id="new-pass-submit-button2" class="btn-submit">Salvar</button>
+                                <button type="button" id="cancel-new-pass" class="btn-submit">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal modal-code dash-code hide">
+                        <div class="icon">
+                            <img src="img/img.jpg" alt="">
+                        </div>
+                        <h1 class="title text" id="user-name">Fulana de tal</h1>
+                        <p class="subtitle text" id="user-email">exemplo@gmail.com</p>
+                        <form action="" method="">
+                            <div class="form-control" id="code-inputs">
+                                <input type="number" maxlength="1">
+                                <input type="number" maxlength="1">
+                                <input type="number" maxlength="1">
+                                <input type="number" maxlength="1">
+                            </div>
+                            <input type="button" id="cancel-confirmacion" value="Cancelar" class="btn-submit">
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section id="notification-area" class="section-area  hide-menu">
+                <p class="title text">notificaticion</p>
+            </section>
+            <section id="chat-area" class="section-area hide-menu">
+                <p class="title text">Chat</p>
+            </section>
+            <!--
+                <section id="-area" class="section-area  hide-menu"><p>Dashboard</p></section>
+                <section id="-area" class="section-area  hide-menu"><p>Dashboard</p></section>
+            -->
+        </main>
+    </div>
+</body>
+</html>

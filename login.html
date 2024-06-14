@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Importando CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Importando JS -->
+    <script defer src="js/scriptLogin.js"></script>
+    <script defer src="js/scriptDarkMode.js"></script>
+
+    <!-- Importando Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body id="login-container">
+    <header id="header-area">
+        <div class="container">
+            <img src="img/logo.png" alt="Logotipo" class="logo-icon">
+            <div id="switch-mode">
+                <i class="light bi bi-brightness-high-fill light"></i>
+                <div id="switcher" class="ligth-mode">
+                    <div class="btn-switch"></div>
+                </div>
+                <i class="dark bi bi-moon dark"></i>
+            </div>
+        </div>
+    </header>
+    <main id="main-area">
+        <div class="container">
+            <div class="modal modal-login modal-up">
+                <div class="icon">
+                    <i class="bi bi-lock"></i>
+                </div>
+                <h1 class="title text">Login</h1>
+                <form action="" method="post" id="login-form">
+                    <div class="form-control">
+                        <label for="email-login" class="no-label-effect lbl-email">Seu E-mail</label>
+                        <input type="email" name="email-login" id="email-login" class="personal input-effect">
+                        <span class="error-message errorEmail hide"><i class="bi bi-info-circle-fill"></i>E-mail inválido</span>
+                    </div>
+                    <div class="form-control">
+                        <label for="password-login" class="no-label-effect lblpass1">Sua Senha</label>
+                        <input type="password" name="password-login" id="password-login" class="pass personal passWord input-effect">
+                        <i class="bi bi-eye-fill eye"></i>
+                        <span class="error-message errorPass1 hide"><i class="bi bi-info-circle-fill"></i>Senha inválida</span>
+                    </div>
+                    <div class="form-control no-bottom">
+                        <input type="button" name="submit-login" id="login-submit-button" value="Entrar" class="btn-submit">
+                    </div>
+                </form>
+            </div>
+            
+            <div class="modal modal-new-pass modal-up">
+                <div class="icon">
+                    <i class="bi bi-key-fill"></i>
+                </div>
+                <h1 class="title text">Crie Uma Nova Senha</h1>
+                <div class="form-control">
+                    <label for="pass1" class="no-label-effect newPass1">Nova Senha</label>
+                    <input type="password" name="pass1" id="pass1" class="pass personal passWord input-effect">
+                    <i class="bi bi-eye-fill eye"></i>
+                    <span class="error-message pass1Error hide"><i class="bi bi-info-circle-fill"></i>Senha inválida (deve ter 6 caracteres no mínimo)</span>
+                </div>
+                <div class="form-control">
+                    <label for="pass2" class="no-label-effect newPass2">Repetir Senha</label>
+                    <input type="password" name="pass2" id="pass2" class="pass personal passWord input-effect">
+                    <i class="bi bi-eye-fill eye"></i>
+                    <span class="error-message pass2Error hide"><i class="bi bi-info-circle-fill"></i>As senhas não coincidem</span>
+                </div>
+                <div class="form-control no-bottom">
+                    <input type="button" name="submit-new-pass" id="new-pass-submit-button" value="Salvar" class="btn-submit">
+                </div>
+            </div>
+
+            <div class="modal modal-confirmation modal-up">
+                <div class="icon">
+                    <i class="bi bi-shield-lock-fill"></i>
+                </div>
+                <h1 class="title text">Confirmar Código</h1>
+                <p class="text text-confirmation">Insira o código de confirmação enviado no seu email no campo abaixo</p>
+                <div class="form-control">
+                    <label for="confirmation-code" class="no-label-effect codeLbl">Código</label>
+                    <input type="number" name="confirmation-code" id="confirmation-code" class="personal input-effect">
+                    <span class="error-message codeError hide"><i class="bi bi-info-circle-fill"></i>Código inválido</span>
+                    <div class="cont">
+                        <div class="left">
+                            <p class="timer" id="timer">60</p>
+                            <a href="#" id="newCode" class="hideCode">Enviar uma novo código.</a>
+                        </div>
+                        <a href="#" class="cancel-code">Cancelar</a>
+                    </div>
+                </div>
+                <div class="form-control no-bottom">
+                    <input type="button" name="submit-confirmation" id="confirmation-submit-button" value="Confirmar" class="btn-submit">
+                </div>
+            </div>
+
+            <div class="modal modal-code">
+                <div class="icon">
+                    <img src="img/img.jpg" alt="">
+                </div>
+                <h1 class="title text" id="user-name">Fulana de tal</h1>
+                <p class="subtitle text" id="user-email">exemplo@gmail.com</p>
+                <form action="" method="">
+                    <div class="form-control" id="code-inputs">
+                        <input type="number" maxlength="1">
+                        <input type="number" maxlength="1">
+                        <input type="number" maxlength="1">
+                        <input type="number" maxlength="1">
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </main>
+    <footer id="footer-area">
+        <div class="container">
+            <p class="text">&copy; Rodape - 2024</p>
+        </div>
+    </footer>
+</body>
+</html>
